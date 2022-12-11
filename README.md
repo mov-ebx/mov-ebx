@@ -24,3 +24,6 @@
 
 ## :bar_chart: Statistics
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mov-ebx)
+
+![snake animation](https://github.com/mov-ebx/mov-ebx/blob/output/github-contribution-grid-snake2.svg)
+
