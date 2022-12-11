@@ -1,8 +1,8 @@
 <div align="center">
   <img src="./assets/cat.gif" width="200"/>
   <h2>hi <img src="./assets/wave.gif" width="30px"/></h2>
+  <a href="https://github.com/mov-ebx"><img src="https://gpvc.arturio.dev/mov-ebx"></a>
 </div>
-
 
 ## :computer: About me
 - I'm a high school student in Canada 🇨🇦
