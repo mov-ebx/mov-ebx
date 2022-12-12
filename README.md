@@ -23,9 +23,9 @@
 </div>
 
 ## :bar_chart: Statistics
-![Stats](https://metrics.lecoq.io/mov-ebx#gh-dark-mode-only)
+![Stats](https://github-readme-stats.vercel.app/api?username=mov-ebx&theme=dark&show_icons=true)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mov-ebx)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mov-ebx&theme=dark)
 
 ## :snake: Contributions
 
