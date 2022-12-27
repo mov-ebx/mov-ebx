@@ -42,6 +42,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EXCLUDED: ${{ secrets.EXCLUDED }}
         EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
+        EXCLUDED_REPOS_FOR_LANGS: ${{ secrets.EXCLUDED_REPOS_FOR_LANGS }}
         EXCLUDE_FORKED_REPOS: true
 
     # Commit all changed files to the repository

@@ -257,12 +257,14 @@ class Stats(object):
         session: aiohttp.ClientSession,
         exclude_repos: Optional[Set] = None,
         exclude_langs: Optional[Set] = None,
+        excluded_lang_repos: Optional[Set] = None,
         ignore_forked_repos: bool = False,
     ):
         self.username = username
         self._ignore_forked_repos = ignore_forked_repos
         self._exclude_repos = set() if exclude_repos is None else exclude_repos
         self._exclude_langs = set() if exclude_langs is None else exclude_langs
+        self._excluded_lang_repos = set() if excluded_lang_repos is None else excluded_lang_repos
         self.queries = Queries(username, access_token, session)
 
         self._name: Optional[str] = None
@@ -347,20 +349,21 @@ Languages:
                 self._stargazers += repo.get("stargazers").get("totalCount", 0)
                 self._forks += repo.get("forkCount", 0)
 
-                for lang in repo.get("languages", {}).get("edges", []):
-                    name = lang.get("node", {}).get("name", "Other")
-                    languages = await self.languages
-                    if name.lower() in exclude_langs_lower:
-                        continue
-                    if name in languages:
-                        languages[name]["size"] += lang.get("size", 0)
-                        languages[name]["occurrences"] += 1
-                    else:
-                        languages[name] = {
-                            "size": lang.get("size", 0),
-                            "occurrences": 1,
-                            "color": lang.get("node", {}).get("color"),
-                        }
+                if not name in self._excluded_lang_repos:
+                    for lang in repo.get("languages", {}).get("edges", []):
+                        name = lang.get("node", {}).get("name", "Other")
+                        languages = await self.languages
+                        if name.lower() in exclude_langs_lower:
+                            continue
+                        if name in languages:
+                            languages[name]["size"] += lang.get("size", 0)
+                            languages[name]["occurrences"] += 1
+                        else:
+                            languages[name] = {
+                                "size": lang.get("size", 0),
+                                "occurrences": 1,
+                                "color": lang.get("node", {}).get("color"),
+                            }
 
             if owned_repos.get("pageInfo", {}).get(
                 "hasNextPage", False

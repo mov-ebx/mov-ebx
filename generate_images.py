@@ -110,6 +110,10 @@ async def main() -> None:
     excluded_repos = (
         {x.strip() for x in exclude_repos.split(",")} if exclude_repos else None
     )
+    exclude_lang_repos = os.getenv("EXCLUDED_REPOS_FOR_LANGS")
+    excluded_lang_repos = (
+        {x.strip() for x in exclude_lang_repos.split(",")} if exclude_lang_repos else None
+    )
     exclude_langs = os.getenv("EXCLUDED_LANGS")
     excluded_langs = (
         {x.strip() for x in exclude_langs.split(",")} if exclude_langs else None
@@ -127,6 +131,7 @@ async def main() -> None:
             session,
             exclude_repos=excluded_repos,
             exclude_langs=excluded_langs,
+            excluded_lang_repos=excluded_lang_repos,
             ignore_forked_repos=ignore_forked_repos,
         )
         await asyncio.gather(generate_languages(s), generate_overview(s))
