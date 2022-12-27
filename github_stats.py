@@ -348,19 +348,20 @@ Languages:
                 self._forks += repo.get("forkCount", 0)
 
                 for lang in repo.get("languages", {}).get("edges", []):
-                    name = lang.get("node", {}).get("name", "Other")
-                    languages = await self.languages
-                    if name.lower() in exclude_langs_lower:
-                        continue
-                    if name in languages:
-                        languages[name]["size"] += lang.get("size", 0)
-                        languages[name]["occurrences"] += 1
-                    else:
-                        languages[name] = {
-                            "size": lang.get("size", 0),
-                            "occurrences": 1,
-                            "color": lang.get("node", {}).get("color"),
-                        }
+                    if not name in self._exclude_repos:
+                        name = lang.get("node", {}).get("name", "Other")
+                        languages = await self.languages
+                        if name.lower() in exclude_langs_lower:
+                            continue
+                        if name in languages:
+                            languages[name]["size"] += lang.get("size", 0)
+                            languages[name]["occurrences"] += 1
+                        else:
+                            languages[name] = {
+                                "size": lang.get("size", 0),
+                                "occurrences": 1,
+                                "color": lang.get("node", {}).get("color"),
+                            }
 
             if owned_repos.get("pageInfo", {}).get(
                 "hasNextPage", False
