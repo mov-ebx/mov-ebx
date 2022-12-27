@@ -26,7 +26,7 @@
 
 ## :bar_chart: Statistics
 
-<dov>
+<div>
 <img src="https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/overview.svg#gh-dark-mode-only">
 <img src="https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/languages.svg#gh-dark-mode-only">
 </div>
