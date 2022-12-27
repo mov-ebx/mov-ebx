@@ -26,9 +26,9 @@
 
 ## :bar_chart: Statistics
 
-![](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/overview.svg#gh-dark-mode-only)
+![Stats](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/overview.svg#gh-dark-mode-only)
 
-![](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/languages.svg#gh-dark-mode-only)
+![Langs](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/languages.svg#gh-dark-mode-only)
 
 ## :snake: Contributions
 
