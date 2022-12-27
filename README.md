@@ -26,10 +26,11 @@
 
 ## :bar_chart: Statistics
 
-![Stats](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/overview.svg#gh-dark-mode-only)
-
-![Langs](https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/languages.svg#gh-dark-mode-only)
+<dov>
+<img src="https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/overview.svg#gh-dark-mode-only">
+<img src="https://raw.githubusercontent.com/mov-ebx/mov-ebx/master/generated/languages.svg#gh-dark-mode-only">
+</div>
 
 ## :snake: Contributions
 
-![snake animation](https://github.com/mov-ebx/mov-ebx/blob/output/github-contribution-grid-snake2.svg)
+![snake animation](https://raw.githubusercontent.com/mov-ebx/mov-ebx/output/github-contribution-grid-snake2.svg)
